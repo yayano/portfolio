@@ -6,7 +6,8 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const handleSubmit = () => {
     const sendEmail = { name, email, contactNo, message };
-    fetch(process.env.REACT_APP_ROOT_URI + '/contact', {
+    console.log(sendEmail);
+    fetch('http://localhost:4000/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -14,6 +15,7 @@ const Contact = () => {
     })
       .then((res) => res.json())
       .then((result) => {
+        console.log(result);
         setName('');
         setEmail('');
         setContactNo('');
