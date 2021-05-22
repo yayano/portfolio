@@ -45,3 +45,7 @@ app.use('/contact', (req, res) => {
 app.listen(port, () => {
   console.log(`listening to port :${port}`);
 });
+
+if(process.env.NOD_ENV==="production"){
+  app.use(express.static('client/build'))
+}
