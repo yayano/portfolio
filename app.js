@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const nodeMailer = require('nodemailer');
-
+const path = require('path');
 const transport = nodeMailer.createTransport({
   service: 'gmail',
   auth: {
@@ -45,7 +45,8 @@ app.use('/contact', (req, res) => {
 });
 app.listen(port, () => {
   console.log(`listening to port :${port}`);
+  console.log(path.join(__dirname + '/client/build'));
 });
 if (process.env.NOD_ENV === 'production') {
-  app.use(express.static(__dirname + '/client/build'));
+  app.use(express.static(path.join(__dirname + '/client/build')));
 }
