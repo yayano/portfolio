@@ -47,5 +47,5 @@ app.listen(port, () => {
   console.log(`listening to port :${port}`);
 });
 if (process.env.NOD_ENV === 'production') {
-  app.use(express.static(__dirname + 'client/build'));
+  app.use(express.static(__dirname + '/client/build'));
 }
