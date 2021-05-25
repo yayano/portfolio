@@ -7,7 +7,7 @@ const Contact = () => {
   const handleSubmit = () => {
     const sendEmail = { name, email, contactNo, message };
     console.log(sendEmail);
-    fetch('http://localhost:4000/contact', {
+    fetch('/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
