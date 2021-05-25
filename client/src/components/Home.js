@@ -1,4 +1,5 @@
 import Skills from './Skills';
+import SocialMedia from './socialMedia';
 const Home = () => {
   return (
     <div className="home">

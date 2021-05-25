@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SocialMedia from './socialMedia';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -115,6 +116,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <SocialMedia />
     </div>
   );
 };
