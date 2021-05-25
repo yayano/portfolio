@@ -1,5 +1,4 @@
 import Skills from './Skills';
-import SocialMedia from './socialMedia';
 const Home = () => {
   return (
     <div className="home">
@@ -7,11 +6,11 @@ const Home = () => {
         <div className="profile-picture">
           <img src="/self.JPG" alt="self" />
         </div>
-        <h1>Develop</h1>
-        <h2>Build & Deploy</h2>
+        <h1>Hello</h1>
+        <h2>I'm Yahia</h2>
         <br />
         <br />
-        <p>Full stack web developper based in Algeria</p>
+        <p>Full stack web developper</p>
       </div>
       <Skills />
     </div>

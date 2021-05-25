@@ -180,6 +180,19 @@ nav {
 .profile-picture img {
   width: 100%;
   height: auto;
+  animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 .skills-wrapper {
   display: flex;
@@ -188,6 +201,19 @@ nav {
 }
 .skills-wrapper img {
   width: 70%;
+  animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 .cardwrapper {
   display: flex;
@@ -290,18 +316,7 @@ nav {
     opacity: 1;
   }
 }
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
+
 .designe {
   display: block;
   position: relative;
@@ -324,6 +339,7 @@ nav {
   top: 0;
   right: 0;
   z-index: -1;
+  animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .education {
   margin: 0;
@@ -343,8 +359,6 @@ nav {
   gap: 10px;
   position: absolute;
   width: 40%;
-  /* height: 100%; */
-  /* top: 50vh; */
 }
 
 .school .school-master {
@@ -359,7 +373,42 @@ nav {
   text-align: left;
   line-height: 30px;
 }
-
+.school .school-master:nth-child(1) {
+  transform: translateX(0px);
+  animation: getting1 1s;
+}
+.school .school-master:nth-child(2) {
+  transform: translateX(200px);
+  animation: getting2 1s;
+}
+.school .school-master:nth-child(3) {
+  transform: translateX(400px);
+  animation: getting3 1s;
+}
+@keyframes getting1 {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes getting2 {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+@keyframes getting3 {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(400px);
+  }
+}
 .school .school-master img {
   border-radius: 50%;
   position: absolute;
@@ -368,6 +417,7 @@ nav {
   margin-right: 10px;
   right: 0;
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.6));
+  animation: text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .school .school-master .edu-text {
   width: 85%;
@@ -703,6 +753,28 @@ nav {
 }
 
 /*******************************************projects***************/
+
+.projects > h1 {
+  text-align: center;
+  margin: 50px 0px;
+  width: 40%;
+  color: white;
+  font-size: 64px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: 30px;
+  animation: getting4 1s;
+}
+@keyframes getting4 {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 .projects .wrapper {
   display: flex;
   flex-direction: row;

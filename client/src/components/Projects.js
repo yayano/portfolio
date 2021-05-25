@@ -1,7 +1,7 @@
 const Projects = () => {
   return (
     <div className="projects">
-      <h1>Projects Page</h1>
+      <h1>Projects</h1>
       <div className="wrapper">
         <div className="project-box">
           <img src="mymedia.jpg" alt="proj" />
