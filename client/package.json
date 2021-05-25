@@ -10,6 +10,8 @@
   },
   "proxy": "http://localhost:4000",
   "dependencies": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
